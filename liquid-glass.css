@@ -1,10 +1,10 @@
 /* =====================================================
-   LIQUID GLASS CSS — v2
+   LIQUID GLASS CSS â€” v2
    Link SAU styles.css:
    <link rel="stylesheet" href="liquid-glass.css" />
    ===================================================== */
 
-/* ── 1. CSS Variables ── */
+/* â”€â”€ 1. CSS Variables â”€â”€ */
 :root {
   --lg-blur: 16px;
   --lg-blur-strong: 28px;
@@ -16,11 +16,11 @@
   --lg-border:        rgba(255, 255, 255, 0.60);
   --lg-border-subtle: rgba(255, 255, 255, 0.25);
 
-  /* Highlight sáng mặt trên (specular) */
+  /* Highlight sÃ¡ng máº·t trÃªn (specular) */
   --lg-specular-top:    rgba(255, 255, 255, 0.50);
   --lg-specular-bottom: rgba(255, 255, 255, 0.08);
 
-  /* Shadow ngoài + inner highlight + inner shadow */
+  /* Shadow ngoÃ i + inner highlight + inner shadow */
   --lg-shadow:
     0 8px 32px  rgba(100, 80, 200, 0.15),
     0 2px  0    rgba(255, 255, 255, 0.60) inset,
@@ -49,41 +49,42 @@
 
 /* Dark theme overrides */
 body.dark-theme {
-  --lg-bg-light:  rgba(28, 20, 58, 0.50);
-  --lg-bg-medium: rgba(28, 20, 58, 0.65);
-  --lg-bg-hover:  rgba(40, 28, 82, 0.80);
+  /* Deep Navy glass overrides */
+  --lg-bg-light:  rgba(15, 40, 68, 0.55);
+  --lg-bg-medium: rgba(13, 33, 55, 0.70);
+  --lg-bg-hover:  rgba(20, 50, 85, 0.85);
 
-  --lg-border:        rgba(155, 135, 255, 0.32);
-  --lg-border-subtle: rgba(155, 135, 255, 0.14);
+  --lg-border:        rgba(100, 160, 220, 0.30);
+  --lg-border-subtle: rgba(100, 160, 220, 0.14);
 
-  --lg-specular-top:    rgba(155, 135, 255, 0.28);
-  --lg-specular-bottom: rgba(0,   0,   0,   0.08);
+  --lg-specular-top:    rgba(140, 190, 240, 0.25);
+  --lg-specular-bottom: rgba(0,   0,   0,   0.10);
 
   --lg-shadow:
     0 8px 32px  rgba(0, 0, 0, 0.50),
-    0 2px  0    rgba(155, 135, 255, 0.28) inset,
-    0 -1px 0    rgba(0,   0,   0,   0.35) inset;
+    0 2px  0    rgba(140, 190, 240, 0.22) inset,
+    0 -1px 0    rgba(0,   0,   0,   0.30) inset;
   --lg-shadow-hover:
-    0 16px 48px rgba(0, 0, 0, 0.65),
-    0 2px  0    rgba(155, 135, 255, 0.40) inset,
-    0 -1px 0    rgba(0,   0,   0,   0.45) inset;
+    0 16px 48px rgba(0, 0, 0, 0.60),
+    0 2px  0    rgba(140, 190, 240, 0.35) inset,
+    0 -1px 0    rgba(0,   0,   0,   0.40) inset;
   --lg-shadow-pressed:
     0 2px  8px  rgba(0, 0, 0, 0.40),
-    0 1px  0    rgba(155, 135, 255, 0.20) inset;
+    0 1px  0    rgba(140, 190, 240, 0.18) inset;
 
-  --lg-tint:       rgba(107, 80, 220, 0.18);
-  --lg-tint-hover: rgba(107, 80, 220, 0.30);
+  --lg-tint:       rgba(56, 138, 221, 0.14);
+  --lg-tint-hover: rgba(56, 138, 221, 0.26);
 }
 
 /* =====================================================
-   2. HEADER / NAVBAR — thanh kính trong suốt
+   2. HEADER / NAVBAR â€” thanh kÃ­nh trong suá»‘t
    ===================================================== */
 .header {
   background-color: var(--lg-bg-medium) !important;
   backdrop-filter: blur(var(--lg-blur-strong)) saturate(190%) brightness(1.05);
   -webkit-backdrop-filter: blur(var(--lg-blur-strong)) saturate(190%) brightness(1.05);
   border-top: 1px solid var(--lg-border);
-  /* Line sáng trên cùng của thanh nav */
+  /* Line sÃ¡ng trÃªn cÃ¹ng cá»§a thanh nav */
   box-shadow:
     0 1px 0  rgba(255, 255, 255, 0.45) inset,
     0 -4px 24px rgba(100, 80, 200, 0.08);
@@ -99,7 +100,7 @@ body.dark-theme {
     0 -6px 32px rgba(100, 80, 200, 0.15);
 }
 
-/* ── Nav logo hover ── */
+/* â”€â”€ Nav logo hover â”€â”€ */
 .nav__logo {
   transition: color var(--lg-t-fast), text-shadow var(--lg-t-mid);
 }
@@ -107,7 +108,7 @@ body.dark-theme {
   text-shadow: 0 0 18px rgba(107, 80, 220, 0.40);
 }
 
-/* ── Nav links — glass pill on hover ── */
+/* â”€â”€ Nav links â€” glass pill on hover â”€â”€ */
 .nav__link {
   position: relative;
   padding: 0.3rem 0.8rem;
@@ -117,7 +118,7 @@ body.dark-theme {
     transform   var(--lg-t-mid) var(--lg-ease-spring);
 }
 
-/* Lớp glass pill — ẩn mặc định, hiện khi hover/active */
+/* Lá»›p glass pill â€” áº©n máº·c Ä‘á»‹nh, hiá»‡n khi hover/active */
 .nav__link::before {
   content: '';
   position: absolute;
@@ -144,7 +145,7 @@ body.dark-theme {
 .nav__link:hover { color: var(--first-color) !important; transform: translateY(-1px); }
 .nav__link.active-link { color: var(--first-color) !important; }
 
-/* ── Dark/light toggle button ── */
+/* â”€â”€ Dark/light toggle button â”€â”€ */
 .change-theme {
   padding: 0.3rem;
   border-radius: 50%;
@@ -158,14 +159,14 @@ body.dark-theme {
   box-shadow: 0 0 16px rgba(107, 80, 220, 0.38);
 }
 
-/* ── Hamburger toggle (mobile) ── */
+/* â”€â”€ Hamburger toggle (mobile) â”€â”€ */
 .nav__toggle {
   transition: transform var(--lg-t-mid) var(--lg-ease-spring);
 }
 .nav__toggle:hover { transform: scale(1.15); }
 
 /* =====================================================
-   3. MOBILE NAV MENU — glass tray từ dưới lên
+   3. MOBILE NAV MENU â€” glass tray tá»« dÆ°á»›i lÃªn
    ===================================================== */
 @media screen and (max-width: 767px) {
   .nav__menu {
@@ -179,19 +180,19 @@ body.dark-theme {
       0  1px  0   rgba(255, 255, 255, 0.50) inset !important;
   }
 
-  /* Mobile: pill effect không cần backdrop lồng */
+  /* Mobile: pill effect khÃ´ng cáº§n backdrop lá»“ng */
   .nav__link::before { backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
 
 /* =====================================================
-   4. BUTTONS — Liquid Glass pill
+   4. BUTTONS â€” Liquid Glass pill
    ===================================================== */
 .button {
   position: relative;
   overflow: hidden;
   border-radius: var(--lg-radius-btn) !important;
 
-  /* Glass tint + gradient thay vì solid color */
+  /* Glass tint + gradient thay vÃ¬ solid color */
   background: linear-gradient(
     150deg,
     hsl(var(--hue-color), 72%, 68%) 0%,
@@ -210,7 +211,7 @@ body.dark-theme {
     filter      var(--lg-t-fast) linear;
 }
 
-/* Specular highlight — vệt sáng nửa trên */
+/* Specular highlight â€” vá»‡t sÃ¡ng ná»­a trÃªn */
 .button::before {
   content: '';
   position: absolute;
@@ -264,7 +265,7 @@ body.dark-theme {
   transform: translateX(3px);
 }
 
-/* ── Ghost / outline button ── */
+/* â”€â”€ Ghost / outline button â”€â”€ */
 .button--link {
   background: var(--lg-bg-light) !important;
   border: 1px solid var(--lg-border-subtle) !important;
@@ -280,7 +281,7 @@ body.dark-theme {
 }
 
 /* =====================================================
-   5. HOME SOCIAL ICONS — glass circles
+   5. HOME SOCIAL ICONS â€” glass circles
    ===================================================== */
 .home__social-icon {
   display: flex;
@@ -310,7 +311,7 @@ body.dark-theme {
 }
 
 /* =====================================================
-   6. SKILLS — glass accordion cards
+   6. SKILLS â€” glass accordion cards
    ===================================================== */
 .skills__content {
   background: var(--lg-bg-light);
@@ -324,7 +325,7 @@ body.dark-theme {
     transform   var(--lg-t-mid) var(--lg-ease-spring),
     box-shadow  var(--lg-t-mid) var(--lg-ease-out),
     background  var(--lg-t-fast);
-  /* line sáng trên cùng */
+  /* line sÃ¡ng trÃªn cÃ¹ng */
   position: relative;
   overflow: hidden;
 }
@@ -356,7 +357,7 @@ body.dark-theme {
 .skills__header:hover { background: var(--lg-tint-hover); }
 
 /* =====================================================
-   7. SERVICES CARDS — glass tiles
+   7. SERVICES CARDS â€” glass tiles
    ===================================================== */
 .services__content {
   background: var(--lg-bg-light) !important;
@@ -392,7 +393,7 @@ body.dark-theme {
 }
 
 /* =====================================================
-   8. ABOUT — info boxes
+   8. ABOUT â€” info boxes
    ===================================================== */
 .about__info > div {
   background: var(--lg-bg-light);
@@ -416,7 +417,7 @@ body.dark-theme {
 }
 
 /* =====================================================
-   9. FOOTER — glass links & socials
+   9. FOOTER â€” glass links & socials
    ===================================================== */
 .footer__link {
   padding: 0.15rem 0.5rem;
@@ -443,13 +444,12 @@ body.dark-theme {
     box-shadow  var(--lg-t-mid);
 }
 
-/* Reset icon margin để căn giữa đúng trong vòng tròn */
+/* Reset icon margin Ä‘á»ƒ cÄƒn giá»¯a Ä‘Ãºng trong vÃ²ng trÃ²n */
 .footer__social .footer__icon {
   margin: 0;
   line-height: 1;
   font-size: 1.2rem;
 }
-
 .footer__social:hover {
   transform: translateY(-4px) scale(1.12);
   background: rgba(255, 255, 255, 0.24);
@@ -457,7 +457,7 @@ body.dark-theme {
 }
 
 /* =====================================================
-   10. SCROLL UP — glass pill
+   10. SCROLL UP â€” glass pill
    ===================================================== */
 .scrollup {
   background: var(--lg-bg-medium) !important;
@@ -478,7 +478,7 @@ body.dark-theme {
 }
 
 /* =====================================================
-   11. CURSOR RIPPLE element (cần JS snippet bên dưới)
+   11. CURSOR RIPPLE element (cáº§n JS snippet bÃªn dÆ°á»›i)
    ===================================================== */
 .lg-cursor-glow {
   pointer-events: none;
@@ -496,6 +496,6 @@ body.dark-theme {
 }
 body.dark-theme .lg-cursor-glow {
   background: radial-gradient(circle,
-    rgba(155, 135, 255, 0.10) 0%,
+    rgba(56, 138, 221, 0.12) 0%,
     transparent 68%);
 }
