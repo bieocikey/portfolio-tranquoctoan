@@ -867,7 +867,7 @@ table { border-collapse: collapse; border-spacing: 0; }
   .home__data  { grid-column: 1; }
   .home__title { font-size: 1.8rem; }
   .home__blob  { width: 180px; height: 180px; }
-  .home__blob-img { width: 220px; }
+  .home__blob-img { width: 550px; }
 
   /* Skills 1 cá»™t */
   .skills__container { grid-template-columns: 1fr; }
@@ -892,7 +892,7 @@ table { border-collapse: collapse; border-spacing: 0; }
   .home__data  { grid-column: initial; }
   .home__img   { order: 1; justify-self: center; }
   .home__blob  { width: 220px; height: 220px; }
-  .home__blob-img { width: 270px; }
+  .home__blob-img { width: 550px; }
 
   .about__container,
   .projects__content,
